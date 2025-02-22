@@ -26,7 +26,7 @@ class Util {
             val packageInfo = packageManager.getPackageInfo(app.packageName, 0)
             map["version_name"] = packageInfo.versionName
             map["version_code"] = getVersionCode(packageInfo)
-            map["built_with"] = BuiltWithUtil.getPlatform(packageInfo.applicationInfo)
+            map["built_with"] = "flutter"
             map["installed_timestamp"] = File(packageInfo.applicationInfo.sourceDir).lastModified()
             return map
         }
